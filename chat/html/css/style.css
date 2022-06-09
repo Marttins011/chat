@@ -1,0 +1,169 @@
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+.color-0{color: #ffffff;}
+.color-1{color: #ff4444;}
+.color-2{color: #99cc00;}
+.color-3{color: #ffbb33;}
+.color-4{color: #0099cc;}
+.color-5{color: #33b5e5;}
+.color-6{color: #aa66cc;}
+.color-8{color: #cc0000;}
+.color-9{color: #cc0068;}
+    src: url("../BarlowCondensed.ttf");
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.no-grow {
+  flex-grow: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+#app {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  background-color: transparent;
+}
+
+.chat-window {
+  position: absolute;
+  left: 15px;
+  width: 32vw;
+  height: 20vh;
+  border-radius: 1.5em;
+  background-color: rgba(255, 255, 255, 0);
+  top: 5vh;
+  -webkit-animation-duration: 2s;
+}
+
+.chat-messages {
+  max-height: 100%;
+  font-size: 14px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  border-radius: 1.5em;
+}
+
+
+.chat-input {
+  font-size: 0.9rem;
+  position: absolute;
+  top: 27vh;
+  left: 15px;
+  width: 28vw;
+  box-sizing: border-box;
+}
+
+textarea {
+  font-family: 'Roboto', sans-serif!important;
+  font-size: 14px;
+  display: block;
+  box-sizing: border-box;
+  padding: 0.65vw;
+  color: #ffffff;
+  background-color: #000000b6;
+  width: 80%;
+  min-height: 4.3vh;
+  max-height: 4.3vh;
+  border: 1px solid #000000b6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  resize: none;
+  border-radius: 1.5em;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.msg {
+  margin-bottom: 5px;
+}
+
+.suggestions {
+  list-style-type: none;
+  padding: 10px;
+  padding-left: 27px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  color: white;
+  background-color: #000000b6;
+  border: 1px solid #000000b6;
+  width: 80%;
+  border-radius: 1.5em;
+}
+
+.help {
+  margin-top: -10px;
+  color: #ffffffe7;
+}
+
+.disabled {
+  margin-top: -10px;
+  color: #ffffff93;
+}
+
+.suggestion {
+  margin-bottom: 5px;
+  color: #ffffffec;
+}
+
+.chat-message {
+  display: inline-block !important;
+  padding: 0.65vw;
+  margin: 0.1vw;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: fit-content;
+  max-width: 100%;
+  overflow: hidden;
+  word-break: break-word;
+  border-radius: 1.5em;
+}
+
+.chat-message-body {
+  /*margin-top: 10px;*/
+}
+
+.chat-message.advert {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.warning {
+  background-color: rgba(255, 136, 0, 0.8);
+}
+
+.normal {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.error {
+  background-color: rgba(191, 36, 36, 0.9);
+}
+
+.chat-message.system {
+  background-color: rgb(67, 57, 111);
+}
+
+.chat-message.emergency {
+  background-color: rgba(224, 50, 50, 0.8);
+}
+
+.chat-message.nonemergency {
+  background-color: rgba(112, 25, 25, 0.8);
+}
+
+.chat-message.report {
+  background-color: rgba(86, 173, 10, 0.8);
+}
