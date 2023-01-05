@@ -2,4 +2,4 @@
 QBCore chat design
 
 # Preview:
-![image](https://user-images.githubusercontent.com/89866234/172869381-5641200e-a231-4948-a401-fc60a1720b55.png)
+![image](https://user-images.githubusercontent.com/89866234/210843273-239aef6f-c6d5-4ad9-b457-2b262417d0db.png)
