@@ -18,58 +18,26 @@
 <body>
   <div id="app"></div>
 
-  <!--UI Test-->
-  <div id="app">
-    <div class="chat-window" :style="this.style" :class="{ 'fadeOutUp animated': !showWindow, 'hidden': shouldHide }">
-      <div class="chat-messages" ref="messages">
-        <message v-for="msg in messages"
-                 :templates="templates"
-                 :multiline="msg.multiline"
-                 :args="msg.args"
-                 :color="msg.color"
-                 :template="msg.template"
-                 :template-id="msg.templateId"
-                 :key="msg">
-        </message>
-      </div>
-    </div>
-    <div class="chat-input" v-show="showInput">
-      <div class="chat-holder">
-        <p class="chat-pill"><i class="bi bi-chat-dots-fill"></i></p>
-        <textarea v-model="message"
-                  ref="input"
-                  type="text"
-                  autofocus
-                  spellcheck="false"
-                  @keyup.esc="hideInput"
-                  @keyup="keyUp"
-                  @keydown="keyDown"
-                  @keypress.enter.prevent="send">
-        </textarea>
-      </div>
-      <suggestions :message="message" :suggestions="suggestions">
-      </suggestions>
-    </div>
-  </div>
-
   <!-- App Template -->
   <script type="text/x-template" id="app_template">
+    <!--UI Test-->
     <div id="app">
       <div class="chat-window" :style="this.style" :class="{ 'fadeOutUp animated': !showWindow, 'hidden': shouldHide }">
         <div class="chat-messages" ref="messages">
           <message v-for="msg in messages"
-                   :templates="templates"
-                   :multiline="msg.multiline"
-                   :args="msg.args"
-                   :color="msg.color"
-                   :template="msg.template"
-                   :template-id="msg.templateId"
-                   :key="msg">
+                  :templates="templates"
+                  :multiline="msg.multiline"
+                  :args="msg.args"
+                  :color="msg.color"
+                  :template="msg.template"
+                  :template-id="msg.templateId"
+                  :key="msg">
           </message>
         </div>
       </div>
       <div class="chat-input" v-show="showInput">
-        <div>
+        <div class="chat-holder">
+          <p class="chat-pill"><i class="bi bi-chat-dots-fill"></i></p>
           <textarea v-model="message"
                     ref="input"
                     type="text"
