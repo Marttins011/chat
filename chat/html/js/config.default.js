@@ -4,7 +4,7 @@ window.CONFIG = {
   defaultTemplateId: 'default', //This is the default template for 2 args1
   defaultAltTemplateId: 'defaultAlt', //This one for 1 arg
   templates: { //You can add static templates here
-    'default': '<div class="chat-message"><p><i class="bi bi-envelope-open-fill"></i>&nbsp;&nbsp;Chat</p><div class="chat-message-body"><strong>{0}:</strong> {1}</div></div>',
+    'default': '<div class="chat-message"><p><i class="bi bi-envelope-open-fill"></i>&nbsp;&nbsp;<b>Chat</b></p><div class="chat-message-body"><strong>{0}:</strong> {1}</div></div>',
     'defaultAlt': '{0}',
     'print': '<pre>{0}</pre>',
     'example:important': '<h1>^2{0}</h1>'

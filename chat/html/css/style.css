@@ -107,14 +107,16 @@ textarea:focus, input:focus {
 .suggestions {
   list-style-type: none;
   padding: 10px;
-  padding-left: 27px;
+  margin-left: 33px;
+  padding-left: 20px;
   font-size: 0.9rem;
   box-sizing: border-box;
   color: white;
   background-color: #000000b6;
   border: 1px solid #000000b6;
   width: 80%;
-  border-radius: 1.5em;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .help {
@@ -136,7 +138,8 @@ textarea:focus, input:focus {
   margin: 0.25vw;
   display: inline-block !important;
   padding: 0.65vw;
-  background-color: rgba(59, 59, 59, 0.9);
+  background-color: rgba(19, 19, 19, 0.826);
+  border: 1px solid #000000b6;
   width: fit-content;
   max-width: 100%;
   overflow: hidden;
