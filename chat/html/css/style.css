@@ -65,6 +65,18 @@ em {
   box-sizing: border-box;
 }
 
+.chat-holder {
+  display: flex;
+}
+.chat-pill {
+  background-color: #101010;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5em 0 0 0.5em;
+  padding: 0 2% 0 2%;
+}
+
 textarea {
   font-family: 'Roboto', sans-serif!important;
   font-size: 14px;
@@ -80,7 +92,7 @@ textarea {
   overflow: hidden;
   text-overflow: ellipsis;
   resize: none;
-  border-radius: 1.5em;
+  border-radius: 0 0.5em 0.5em 0;
 }
 
 textarea:focus, input:focus {

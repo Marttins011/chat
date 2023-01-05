@@ -6,6 +6,7 @@
   <link href="vendor/latofonts.css" rel="stylesheet">
   <link href="vendor/flexboxgrid.6.3.1.min.css" rel="stylesheet"></link>
   <link href="vendor/animate.3.5.2.min.css" rel="stylesheet"></link>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <!--<link href="./css/index.css" rel="stylesheet"></link>-->
   <link href="./css/style.css" rel="stylesheet"></link>
 
@@ -16,6 +17,40 @@
 </head>
 <body>
   <div id="app"></div>
+
+  <!--UI Test-->
+  <div id="app">
+    <div class="chat-window" :style="this.style" :class="{ 'fadeOutUp animated': !showWindow, 'hidden': shouldHide }">
+      <div class="chat-messages" ref="messages">
+        <message v-for="msg in messages"
+                 :templates="templates"
+                 :multiline="msg.multiline"
+                 :args="msg.args"
+                 :color="msg.color"
+                 :template="msg.template"
+                 :template-id="msg.templateId"
+                 :key="msg">
+        </message>
+      </div>
+    </div>
+    <div class="chat-input" v-show="showInput">
+      <div class="chat-holder">
+        <p class="chat-pill"><i class="bi bi-chat-dots-fill"></i></p>
+        <textarea v-model="message"
+                  ref="input"
+                  type="text"
+                  autofocus
+                  spellcheck="false"
+                  @keyup.esc="hideInput"
+                  @keyup="keyUp"
+                  @keydown="keyDown"
+                  @keypress.enter.prevent="send">
+        </textarea>
+      </div>
+      <suggestions :message="message" :suggestions="suggestions">
+      </suggestions>
+    </div>
+  </div>
 
   <!-- App Template -->
   <script type="text/x-template" id="app_template">
