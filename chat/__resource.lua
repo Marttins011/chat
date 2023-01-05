@@ -1,4 +1,4 @@
-description 'chat management stuff'
+description 'MT-Chat Enhanced'
 
 ui_page 'html/index.html'
 
